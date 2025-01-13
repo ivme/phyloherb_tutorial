@@ -130,7 +130,7 @@ rm 3_alignments.tgz
 
 ## Phylogeny reconstruction
 1. Concatenation
-In this step, we concatenate the aligned genes for all five sample species. This creates an neatly aligned, simplified genome for each species, containing only the overlapping genes in the same order. We will use this simplified genome to estimate the phylogeny.
+In this step, we concatenate the aligned genes for all five sample species. This creates an neatly aligned, simplified genome for each species, containing only the orthologous genes in the same order. We will use these simplified genomes to estimate the phylogeny.
 
 Concatenate all of the fasta sequences in the input directory `3_alignments/chl` with the suffix `.mafft.aln.fas`:
 ```
