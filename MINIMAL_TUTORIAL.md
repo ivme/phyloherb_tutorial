@@ -1,8 +1,21 @@
 # Goal
 The goal of this tutorial is to learn to perform phylogenomic analysis on plant genome data using PhyloHerb and related tools. The inputs are reads from the genomes of several plant species; the final result is a phylogenetic species tree describing the estimated evolution of the input plant species from (unknown) common ancestors.
 
-## Prerequisites
-This tutorial is for MacOS.
+## Installation
+### Option 1: Docker
+Install [Docker](https://docs.docker.com/get-started/get-docker/)
+```
+docker build -t phyloherb .
+```
+This will take some time, but you only need to run it once. It installs all necessary software in a docker container.
+
+Next, open a shell in your new docker container and mount this directory as `tutorial`:
+```
+docker run -it -v ${PWD}:/tutorial phyloherb
+```
+
+### Option 2: Manual Setup with MiniConda
+These instructions are for MacOS.
 
 Install miniconda (see https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
