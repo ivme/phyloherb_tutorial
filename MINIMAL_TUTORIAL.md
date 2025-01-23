@@ -10,13 +10,13 @@ Choose one of two configurations:
 #### A. Basic Setup
 ```bash
 docker build -t phyloherb docker/base
-docker run -it -v ${PWD}:/tutorial phyloherb
+docker run -it phyloherb
 ```
 
 #### B. SLURM-enabled Setup (for cluster simulation)
 ```bash
 docker build -t phyloherb-slurm docker/slurm
-docker run -it -v ${PWD}:/tutorial phyloherb-slurm
+docker run -it phyloherb-slurm 
 ```
 
 ### Option 2: Manual Setup with MiniConda
