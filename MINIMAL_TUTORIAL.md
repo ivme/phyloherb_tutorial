@@ -37,16 +37,18 @@ conda install -c bioconda mafft
 conda install -c bioconda iqtree
 ```
 
+Download PhyloHerb and example datasets from Github
+```
+git clone https://github.com/lmcai/PhyloHerb.git
+```
+
 ## Assembly
 The goal of assembly is to take *reads* (fragments of DNA) from a species's genome and assemble them into a complete genome for the species. In this tutorial, we will use plastid DNA (DNA from the chloroplasts), not nuclear DNA, from five species: sp1, sp2, sp3, sp4, sp5
 
 We will illustrate the assembly process for a single species, sp1, using example reads stored in the PhyloHerb repository.
 
 ### 1. Input preparation:
-Download PhyloHerb and example datasets from Github
-```
-git clone https://github.com/lmcai/PhyloHerb.git
-```
+
 
 Then let's create a working directory `minimal_example`.
 ```

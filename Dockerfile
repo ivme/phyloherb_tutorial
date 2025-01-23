@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     bzip2 \
     ca-certificates \
     git \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Miniconda
@@ -39,4 +40,13 @@ RUN source activate phyloherb \
 
 # Set the default command to activate the conda environment
 ENTRYPOINT ["/bin/bash", "-c"]
+# Create and set a working directory
+WORKDIR /app
+
+# Download and extract PhyloHerb repository
+RUN wget https://github.com/lmcai/PhyloHerb/archive/refs/heads/main.zip \
+    && unzip main.zip \
+    && mv PhyloHerb-main PhyloHerb \
+    && rm main.zip
+
 CMD ["source activate phyloherb && /bin/bash"]
