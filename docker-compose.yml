@@ -1,0 +1,7 @@
+services:
+  base:
+    build: ./docker/base
+    image: phyloherb-base
+  slurm:
+    build: ./docker/slurm
+    image: phyloherb-slurm

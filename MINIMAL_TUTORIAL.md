@@ -4,14 +4,19 @@ The goal of this tutorial is to learn to perform phylogenomic analysis on plant 
 ## Installation
 ### Option 1: Docker
 Install [Docker](https://docs.docker.com/get-started/get-docker/)
-```
-docker build -t phyloherb .
-```
-This will take some time, but you only need to run it once. It installs all necessary software in a docker container.
 
-Next, open a shell in your new docker container and mount this directory as `tutorial`:
-```
+Choose one of two configurations:
+
+#### A. Basic Setup
+```bash
+docker build -t phyloherb docker/base
 docker run -it -v ${PWD}:/tutorial phyloherb
+```
+
+#### B. SLURM-enabled Setup (for cluster simulation)
+```bash
+docker build -t phyloherb-slurm docker/slurm
+docker run -it -v ${PWD}:/tutorial phyloherb-slurm
 ```
 
 ### Option 2: Manual Setup with MiniConda
